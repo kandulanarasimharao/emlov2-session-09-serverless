@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image'
 
 const CONFIG = {
-  "backend_url": "https://buo6tp1cx7.execute-api.ap-south-1.amazonaws.com/dev/inference"
+  "backend_url": "https://vun8zl02sf.execute-api.ap-south-1.amazonaws.com/dev/inference"
 }
 
 export default function Home() {
@@ -56,17 +56,15 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
-          MNIST Inference on {' '}
+          CIFAR Inference on {' '}
           <a className="text-blue-600" href="https://nextjs.org">
             Serverless
           </a>
         </h1>
-        <div className="mt-10 text-lg">
-          Select a PNG Image from <a href="https://github.com/pytorch/serve/tree/master/examples/image_classifier/mnist/test_data" target="_blank" className='text-blue-600'>Example</a>
-        </div>
+        
         <div className='mt-10 flex flex-row space-x-5 text-xl'>
           <div>
-            <input className="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" accept='image/png' onChange={(e) => {
+            <input className="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" accept='image/jpg' onChange={(e) => {
               console.log("got files :: ", e.target.files)
 
               if (!e.target.files) return;
